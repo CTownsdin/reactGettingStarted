@@ -1,0 +1,43 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>React - State</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+</head>
+<body>
+
+  <!-- container node, JSX lets you write like it's HTML -->
+  <div id="jsx"></div>
+
+  <!-- container node, DOM is the underlying thing for jsx -->
+  <div id="dom"></div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.12.2/react.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.12.2/JSXTransformer.js"></script>
+
+  <script type="text/jsx">
+  /** @jsx React.DOM */       /*the Pragma*/
+  var MessageBox = React.createClass({
+    render: function() {
+      return (
+        <div className="container">
+          <h1>Hello, World</h1>
+        <div>
+      );
+    }
+  });
+
+  var reactComponentJSX = React.renderComponent(
+    <MessageBox />,
+    document.getElementById('jsx')
+  );
+
+  </script>
+
+</body>
+</html>

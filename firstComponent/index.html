@@ -1,0 +1,44 @@
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>React - First Component</title>
+</head>
+<body>
+
+  <!-- container node -->
+  <div id="app">HI FROM CONTAINER NODE - LOADING... </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.12.2/react.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.12.2/JSXTransformer.js"></script>
+
+  <script type="text/jsx">
+  /* "The Pragma" */
+  /** @jsx React.DOM */
+
+    var MessageBox = React.createClass({
+      render: function() {
+        return (
+          <h1>Hello World, MessageBox render function</h1>
+        );
+      }
+    });
+
+    React.renderComponent(
+      <MessageBox />,
+      document.getElementById('app'),
+      function () {
+        console.log('I ran after render.');
+      }
+    )
+
+  </script>
+
+</body>
+</html>
